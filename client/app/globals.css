@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --paper: #0B132B;
+    --card-bg: #111D38;
+    --ink: #F8FAFC;
+    --ink-muted: #94A3B8;
+    --route-blue: #00D2FF;
+    --signal-amber: #F59E0B;
+    --transit-green: #10B981;
+    --alert-clay: #F43F5E;
+    --line-hairline: rgba(255, 255, 255, 0.12);
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-public-sans), system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Design Tokens & Utilities */
+.font-display {
+  font-family: var(--font-space-grotesk), monospace, system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-public-sans), system-ui, sans-serif;
+}
+
+/* Civic Grid Panel style */
+.civic-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--line-hairline);
+  border-radius: 6px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+}
+
+.civic-card-paper {
+  background-color: #16264C;
+  border: 1px solid var(--line-hairline);
+  border-radius: 6px;
+}
+
+.civic-input {
+  background-color: #080E21;
+  border: 1px solid var(--line-hairline);
+  border-radius: 4px;
+  color: var(--ink);
+  padding: 0.6rem 0.85rem;
+  font-size: 0.875rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.civic-input:focus {
+  outline: none;
+  border-color: var(--route-blue);
+  box-shadow: 0 0 0 2px rgba(0, 210, 255, 0.25);
+}
+
+.civic-btn-primary {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #0B132B;
+  border-radius: 4px;
+  font-weight: 700;
+  font-family: var(--font-space-grotesk);
+  padding: 0.55rem 1.1rem;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3);
+}
+.civic-btn-primary:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.civic-btn-secondary {
+  background: linear-gradient(135deg, #00D2FF 0%, #0284C7 100%);
+  color: #0B132B;
+  border-radius: 4px;
+  font-weight: 700;
+  font-family: var(--font-space-grotesk);
+  padding: 0.55rem 1.1rem;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 10px rgba(0, 210, 255, 0.3);
+}
+.civic-btn-secondary:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.civic-btn-outline {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--ink);
+  border: 1px solid var(--line-hairline);
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: var(--font-space-grotesk);
+  padding: 0.55rem 1.1rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.civic-btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Focus Ring */
+*:focus-visible {
+  outline: 2px solid var(--route-blue);
+  outline-offset: 2px;
+}
